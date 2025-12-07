@@ -337,6 +337,16 @@ export interface VaultAPI {
    */
   getAbstractFileByPath(path: string): TAbstractFile | null;
 
+  /**
+   * Get all files in the vault
+   */
+  getFiles(): TFile[];
+
+  /**
+   * Get all markdown files in the vault
+   */
+  getMarkdownFiles(): TFile[];
+
   // Typed event methods
   on<K extends keyof VaultEventMap>(
     event: K,
@@ -447,6 +457,8 @@ export interface InputModalOptions {
   label?: string;
   validate?: (value: string) => boolean | string;
   type?: 'text' | 'password' | 'email' | 'url' | 'number';
+  confirmText?: string;
+  cancelText?: string;
 }
 
 export interface ConfirmModalOptions {
