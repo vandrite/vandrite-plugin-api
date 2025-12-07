@@ -1,0 +1,54 @@
+{
+  "name": "@vandrite/plugin-api",
+  "version": "0.1.0",
+  "description": "Official API for developing Vandrite plugins",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "vandrite",
+    "plugin",
+    "api",
+    "notes",
+    "markdown",
+    "editor"
+  ],
+  "author": "Vandrite <contact@vandrite.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vandrite/vandrite-plugin-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vandrite/vandrite-plugin-api/issues"
+  },
+  "homepage": "https://github.com/vandrite/vandrite-plugin-api#readme",
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/react": "^18.0.0 || ^19.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
